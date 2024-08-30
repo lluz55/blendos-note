@@ -1,0 +1,72 @@
+track: blendos-base
+impl: http://github.com/blend-os/tracks/raw/main
+repo: 'https://pkg-repo.blendos.co'
+packages:
+  # Nvidia Drivers
+  #- nvidia-dkms
+  #- nvidia-prime
+  - switcheroo-control
+  - neovim
+  # Terminal
+  - fish
+  - kitty
+  - starship
+  - ranger
+  - dust
+  - starship
+  - exa
+  - github-cli
+  # Development
+  - nodejs
+  - clang
+  # Cosmic
+  - cosmic
+  - cosmic-session
+  - cosmic-greeter
+  - cosmic-wallpapers
+  - network-manager-applet
+  - xcursor-vanilla-dmz-aa
+  # Waydroid
+  - 'lzip'
+  - 'python-requests'
+  - 'python-tqdm'
+  - 'sqlite'
+  - 'python-dbus' 
+  # Fonts
+  - noto-fonts
+  - noto-fonts-cjk
+  - noto-fonts-emoji
+  - ttf-firacode-nerd  
+  - ttf-hack
+  # Audio control
+  - pavucontrol
+  - pipewire
+  - pipewire-alsa
+  - pipewire-audio
+  - pipewire-jack
+  - pipewire-pulse
+  # Bluetooth
+  - blueman
+  - bluez
+  - bluez-cups
+  - bluez-plugins
+  - bluez-utils
+  # Vulkan drivers 
+  - vulkan-icd-loader
+  - vulkan-intel
+  - vulkan-mesa-layers
+  - vulkan-nouveau
+  # Power
+  - power-profiles-daemon
+
+services:
+  - switcheroo-control
+  - 'cosmic-greeter'
+
+aur-packages:
+  - 'python-inquirerpy'
+
+commands:
+  - 'git clone https://github.com/casualsnek/waydroid_script.git /opt/waydroid-script/'
+  - 'python /opt/waydroid-script/main.py install libhoudini' # replace libhoudini with libndk if on an AMD CPU
+
