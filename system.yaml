@@ -3,10 +3,12 @@ impl: http://github.com/blend-os/tracks/raw/main
 repo: 'https://pkg-repo.blendos.co'
 packages:
   # Nvidia Drivers
-  #- nvidia-dkms
-  #- nvidia-prime
+  - nvidia-dkms
+  - nvidia-prime
   - switcheroo-control
+  # Text editors
   - neovim
+  - helix
   # Terminal
   - fish
   - kitty
@@ -14,11 +16,18 @@ packages:
   - ranger
   - dust
   - starship
-  - exa
+  - eza
   - github-cli
+  - bat
+  - ripgrep
+  - fd
+  - zoxide
+  - broot
+  - zellij
   # Development
   - nodejs
   - clang
+  - mold
   # Cosmic
   - cosmic
   - cosmic-session
@@ -27,11 +36,11 @@ packages:
   - network-manager-applet
   - xcursor-vanilla-dmz-aa
   # Waydroid
-  - 'lzip'
-  - 'python-requests'
-  - 'python-tqdm'
-  - 'sqlite'
-  - 'python-dbus' 
+  - lzip
+  - python-requests
+  - python-tqdm
+  - sqlite
+  - python-dbus 
   # Fonts
   - noto-fonts
   - noto-fonts-cjk
@@ -58,13 +67,16 @@ packages:
   - vulkan-nouveau
   # Power
   - power-profiles-daemon
+  # Customization
+  - archlinux-wallpapers
+
 
 services:
   - switcheroo-control
-  - 'cosmic-greeter'
+  - cosmic-greeter
 
 aur-packages:
-  - 'python-inquirerpy'
+  - python-inquirerpy
 
 commands:
   - 'git clone https://github.com/casualsnek/waydroid_script.git /opt/waydroid-script/'
