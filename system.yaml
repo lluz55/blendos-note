@@ -28,6 +28,7 @@ packages:
   - nodejs
   - clang
   - mold
+  - distrobox
   # Cosmic
   - cosmic
   - cosmic-session
@@ -68,8 +69,11 @@ packages:
   # Power
   - power-profiles-daemon
   # Customization
-  - archlinux-wallpapers
-
+  # Browsers
+  - firefox
+  # --- Broken! ---
+  # - vivaldi
+  # - vivaldi-ffmpeg-codecs
 
 services:
   - switcheroo-control
@@ -77,8 +81,12 @@ services:
 
 aur-packages:
   - python-inquirerpy
+  # Browsers
+  # --- Broken ---
+  #- brave-bin
+  #- zen-browser-bin 
 
 commands:
   - 'git clone https://github.com/casualsnek/waydroid_script.git /opt/waydroid-script/'
   - 'python /opt/waydroid-script/main.py install libhoudini' # replace libhoudini with libndk if on an AMD CPU
-
+  - 'locale-gen'
