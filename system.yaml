@@ -4,6 +4,7 @@ repo: 'https://pkg-repo.blendos.co'
 packages:
   # Nvidia Drivers
   - nvidia-dkms
+  - nvidia-container-toolkit
   - nvidia-prime
   - switcheroo-control
   # Text editors
